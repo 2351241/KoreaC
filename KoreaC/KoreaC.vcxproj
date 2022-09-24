@@ -130,6 +130,10 @@
     <ClCompile Include="stdio1.c" />
     <ClCompile Include="stdio2.c" />
     <ClCompile Include="stdio3.c" />
+    <ClCompile Include="stdio4.c" />
+    <ClCompile Include="stdio5.c" />
+    <ClCompile Include="type1.c" />
+    <ClCompile Include="type2.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
