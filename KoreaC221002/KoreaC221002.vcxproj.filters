@@ -15,13 +15,22 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Review.c">
+    <ClCompile Include="Review.C">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Oper1.c">
+    <ClCompile Include="switch.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Oper2.c">
+    <ClCompile Include="page 123.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="while1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="page 143.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="for1.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
