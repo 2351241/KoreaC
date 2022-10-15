@@ -3,7 +3,7 @@
 #include <stdio.h>
 #define THREE			3				// THREE를 쓰면 3이라고 인식하게끔 설정값 세팅 (전처리기)
 
-int main3() {
+int main123() {
 	//page 140
 	/*
 	int num;
@@ -59,6 +59,7 @@ int main3() {
 		printf("피연산자 1 :");
 		scanf("%d", &피연산자1);
 		printf("연산자 :");
+		rewind(stdin);
 		scanf("%c", &ascil1);
 		printf("피연산자 2 :");
 		scanf("%d", &피연산자2);
