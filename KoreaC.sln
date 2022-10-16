@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Piano", "Piano\Piano.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KoreaC221015", "KoreaC221015\KoreaC221015.vcxproj", "{B04ABA45-7FFA-40E3-B25B-B3A4844D1A45}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KoreaC221016", "KoreaC221016\KoreaC221016.vcxproj", "{2B0D73A4-53D3-4BE9-8248-88914E176608}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -71,6 +73,14 @@ Global
 		{B04ABA45-7FFA-40E3-B25B-B3A4844D1A45}.Release|x64.Build.0 = Release|x64
 		{B04ABA45-7FFA-40E3-B25B-B3A4844D1A45}.Release|x86.ActiveCfg = Release|Win32
 		{B04ABA45-7FFA-40E3-B25B-B3A4844D1A45}.Release|x86.Build.0 = Release|Win32
+		{2B0D73A4-53D3-4BE9-8248-88914E176608}.Debug|x64.ActiveCfg = Debug|x64
+		{2B0D73A4-53D3-4BE9-8248-88914E176608}.Debug|x64.Build.0 = Debug|x64
+		{2B0D73A4-53D3-4BE9-8248-88914E176608}.Debug|x86.ActiveCfg = Debug|Win32
+		{2B0D73A4-53D3-4BE9-8248-88914E176608}.Debug|x86.Build.0 = Debug|Win32
+		{2B0D73A4-53D3-4BE9-8248-88914E176608}.Release|x64.ActiveCfg = Release|x64
+		{2B0D73A4-53D3-4BE9-8248-88914E176608}.Release|x64.Build.0 = Release|x64
+		{2B0D73A4-53D3-4BE9-8248-88914E176608}.Release|x86.ActiveCfg = Release|Win32
+		{2B0D73A4-53D3-4BE9-8248-88914E176608}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

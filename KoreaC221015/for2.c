@@ -5,7 +5,7 @@
 
 int main123() {
 	//page 140
-	/*
+	
 	int num;
 
 	while (1) {
@@ -20,8 +20,8 @@ int main123() {
 			continue;
 		printf("%d\n", num);
 	}
-	*/
-	/*
+	
+	
 	char ascil1 = '\0';			//NULL문자 (비어있다)
 	if (ascil1 == 0) {
 		printf("널문자는 0과 같네요");
@@ -35,7 +35,7 @@ int main123() {
 	if (ascil3 <= 97) {
 		printf("대문자\n");
 	}
-	*/
+	
 	//대문자 : 65 ~ 90
 	//소문자 : 97 ~ 122 
 
