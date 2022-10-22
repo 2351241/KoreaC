@@ -14,16 +14,7 @@ int Sum(int n1, int n2) {
 
 //page 237 3¹ø
 
-int __num(int n1) {
-	int result123123 = 0;
 
-	for (int i = n1; i <= n1 + 200; i++) {
-		if ( % 7 = 0) {
-
-		}
-	}
-
-}
 
 int main() {
 	int num1 = 5;
