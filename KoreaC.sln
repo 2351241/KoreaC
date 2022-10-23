@@ -21,6 +21,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KoreaC221022", "KoreaC22102
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OMok123", "OMok123\OMok123.vcxproj", "{2EEF7F6B-88E9-4D69-A54F-E61EE583FD11}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KoreaC221023", "KoreaC221023\KoreaC221023.vcxproj", "{E695E949-B4D3-4291-86E9-8C50E6C78EBB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -101,6 +103,14 @@ Global
 		{2EEF7F6B-88E9-4D69-A54F-E61EE583FD11}.Release|x64.Build.0 = Release|x64
 		{2EEF7F6B-88E9-4D69-A54F-E61EE583FD11}.Release|x86.ActiveCfg = Release|Win32
 		{2EEF7F6B-88E9-4D69-A54F-E61EE583FD11}.Release|x86.Build.0 = Release|Win32
+		{E695E949-B4D3-4291-86E9-8C50E6C78EBB}.Debug|x64.ActiveCfg = Debug|x64
+		{E695E949-B4D3-4291-86E9-8C50E6C78EBB}.Debug|x64.Build.0 = Debug|x64
+		{E695E949-B4D3-4291-86E9-8C50E6C78EBB}.Debug|x86.ActiveCfg = Debug|Win32
+		{E695E949-B4D3-4291-86E9-8C50E6C78EBB}.Debug|x86.Build.0 = Debug|Win32
+		{E695E949-B4D3-4291-86E9-8C50E6C78EBB}.Release|x64.ActiveCfg = Release|x64
+		{E695E949-B4D3-4291-86E9-8C50E6C78EBB}.Release|x64.Build.0 = Release|x64
+		{E695E949-B4D3-4291-86E9-8C50E6C78EBB}.Release|x86.ActiveCfg = Release|Win32
+		{E695E949-B4D3-4291-86E9-8C50E6C78EBB}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

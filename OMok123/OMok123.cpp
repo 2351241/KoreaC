@@ -10,15 +10,24 @@
 #define XPOS(x)(X_VOID + (x)*INTERVAL)         // 바둑돌 공간x
 #define YPOS(y)(Y_VOID + (y)*INTERVAL)         // 바둑돌 공간y
 
+//바둑돌 위치를 기억할 전역변수
+int g_dol[Y_COUNT][X_COUNT];            // 0: 돌없음, 1: 검은돌, 2:흰색돌
+int g_step;                     //0이면 검은돌, 1이면 흰색돌
+
+
 
 INT_PTR CALLBACK DlgProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 {
     static HBRUSH  hBrush;          // 색깔넣기 static : 함수가 끝나도 없어지지 않게끔
     static HDC hdc;
     PAINTSTRUCT ps;
+    int a_x = LOWORD(lParam);
+    int a_y = HIWORD(lParam);
     UNREFERENCED_PARAMETER(lParam);
     switch (message)
     {
+    case WM_CTLCOLORDLG:
+        return (INT_PTR)hBrush;
     case WM_PAINT: // 화면그리기 
     {
         hdc = BeginPaint(hDlg, &ps);
@@ -34,17 +43,43 @@ INT_PTR CALLBACK DlgProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
             LineTo(hdc, XPOS(X_COUNT-1), YPOS(y));
         }
 
+        //바둑돌 그리기
+        for (int y = 0; y < Y_COUNT; y++) {
+            for (int x = 0; x < X_COUNT; x++) {
+                if (g_dol[y][x] > 0) {
+                    if (g_dol[y][x] == 1) {
+                        SelectObject(hdc, GetStockObject(BLACK_BRUSH));         //내 페인트색 검은색으로
+                    }
+                    else {
+                        SelectObject(hdc, GetStockObject(WHITE_BRUSH));         //내 페인트색 하얀색으로
+                    }
+                    Ellipse(hdc, XPOS(x) - RADIUS, YPOS(y) - RADIUS, XPOS(x) + RADIUS, YPOS(y) + RADIUS);
+                }
+            }
+        }
+
         EndPaint(hDlg, &ps);
     }
     break;
     case WM_LBUTTONDOWN:
-        Ellipse(hdc, 150, 150, 250, 250);
-        MessageBox(hDlg, _T("내용"), _T("제목"), NULL);
-        InvalidateRect(hDlg, NULL, TRUE);
+        // 마우스가 클릭된 공간을 바둑돌 범위로 체크
+        if (a_x > (XPOS(0) - RADIUS) &&
+            a_y > (YPOS(0) - RADIUS) &&
+            a_x < (XPOS(X_COUNT-1)+RADIUS) &&
+            a_y < (YPOS(Y_COUNT-1)+RADIUS)) 
+        {
+            int x = (a_x - X_VOID + RADIUS) / INTERVAL;
+            int y = (a_y - Y_VOID + RADIUS) / INTERVAL;
+            if (g_dol[y][x] == 0) {
+                g_dol[y][x] = g_step + 1;
+                g_step = !g_step;
+                InvalidateRect(hDlg, NULL, TRUE);
+            }
+        }
         break;
     case WM_INITDIALOG:             //처음 실행할 때 불리는 메시지
         SetWindowPos(hDlg, HWND_TOP, 50, 50, 600, 600, NULL); // x1, y1, x2, y2
-        hBrush = CreateSolidBrush(RGB(128, 128, 128));            // 0: 검은색, 255: 하얀색
+        hBrush = CreateSolidBrush(RGB(244, 176, 77));            // 0: 검은색, 255: 하얀색
         return (INT_PTR)TRUE;
 
     case WM_COMMAND:
